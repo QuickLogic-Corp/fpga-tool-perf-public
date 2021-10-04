@@ -1,0 +1,6155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FPGA tool perf results: index</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.5.0/dist/chart.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  </head>
+  <body>
+
+    <div id="home" class="w3-content">
+      <div id="header" class="w3-container w3-center w3-padding">
+        <h1>FPGA Tool Perf results</h1>
+      </div>
+
+      <div id="overview" class="w3-container w3-center">
+        <p>Click on a board to select it.</p>
+      </div>
+
+      <div class="w3-row">
+        
+          <div id="arty-a100t" class="w3-col m4 l3">
+
+            <button id="arty-a100t-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('arty-a100t')">
+            arty-a100t
+            </button>
+          </div>
+        
+          <div id="arty-a35t" class="w3-col m4 l3">
+
+            <button id="arty-a35t-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('arty-a35t')">
+            arty-a35t
+            </button>
+          </div>
+        
+          <div id="basys3" class="w3-col m4 l3">
+
+            <button id="basys3-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('basys3')">
+            basys3
+            </button>
+          </div>
+        
+          <div id="chandalar" class="w3-col m4 l3">
+
+            <button id="chandalar-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('chandalar')">
+            chandalar
+            </button>
+          </div>
+        
+          <div id="icebreaker" class="w3-col m4 l3">
+
+            <button id="icebreaker-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('icebreaker')">
+            icebreaker
+            </button>
+          </div>
+        
+          <div id="lifcl-40" class="w3-col m4 l3">
+
+            <button id="lifcl-40-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('lifcl-40')">
+            lifcl-40
+            </button>
+          </div>
+        
+          <div id="nexys-video" class="w3-col m4 l3">
+
+            <button id="nexys-video-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('nexys-video')">
+            nexys-video
+            </button>
+          </div>
+        
+          <div id="quickfeather" class="w3-col m4 l3">
+
+            <button id="quickfeather-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('quickfeather')">
+            quickfeather
+            </button>
+          </div>
+        
+          <div id="tinyfpgab2" class="w3-col m4 l3">
+
+            <button id="tinyfpgab2-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('tinyfpgab2')">
+            tinyfpgab2
+            </button>
+          </div>
+        
+          <div id="zybo" class="w3-col m4 l3">
+
+            <button id="zybo-button" class="project-button w3-button w3-light-gray w3-block w3-center" onclick="selectTable('zybo')">
+            zybo
+            </button>
+          </div>
+        
+      </div>
+
+      <div>
+        
+          <div id="arty-a100t-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-fpga-interchange </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> vivado </th>
+    
+      <th class="w3-center w3-border"> vpr </th>
+    
+      <th class="w3-center w3-border"> vpr-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado-uhdm </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/axi-lite-reg.html">axi-lite-reg</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex.html">baselitex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex-nexys-video.html">baselitex-nexys-video</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/blinky.html">blinky</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n1.html">bram-n1</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n2.html">bram-n2</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n3.html">bram-n3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/daisho-usb3.html">daisho-usb3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/dram-test-64x1d.html">dram-test-64x1d</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-displayport.html">hamsternz-displayport</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-hdmi.html">hamsternz-hdmi</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/ibex.html">ibex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/murax.html">murax</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc.html">picosoc</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv.html">vexriscv</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv-smp.html">vexriscv-smp</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/zynq-ps7-counter.html">zynq-ps7-counter</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="arty-a35t-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-fpga-interchange </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> vivado </th>
+    
+      <th class="w3-center w3-border"> vpr </th>
+    
+      <th class="w3-center w3-border"> vpr-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado-uhdm </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/axi-lite-reg.html">axi-lite-reg</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex.html">baselitex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex-nexys-video.html">baselitex-nexys-video</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/blinky.html">blinky</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n1.html">bram-n1</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n2.html">bram-n2</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n3.html">bram-n3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/daisho-usb3.html">daisho-usb3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/dram-test-64x1d.html">dram-test-64x1d</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-displayport.html">hamsternz-displayport</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-hdmi.html">hamsternz-hdmi</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/ibex.html">ibex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/murax.html">murax</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc.html">picosoc</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv.html">vexriscv</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv-smp.html">vexriscv-smp</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/zynq-ps7-counter.html">zynq-ps7-counter</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="basys3-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-fpga-interchange </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> vivado </th>
+    
+      <th class="w3-center w3-border"> vpr </th>
+    
+      <th class="w3-center w3-border"> vpr-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado-uhdm </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/axi-lite-reg.html">axi-lite-reg</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex.html">baselitex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex-nexys-video.html">baselitex-nexys-video</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/blinky.html">blinky</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n1.html">bram-n1</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n2.html">bram-n2</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n3.html">bram-n3</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/daisho-usb3.html">daisho-usb3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/dram-test-64x1d.html">dram-test-64x1d</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-displayport.html">hamsternz-displayport</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-hdmi.html">hamsternz-hdmi</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/ibex.html">ibex</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/murax.html">murax</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc.html">picosoc</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv.html">vexriscv</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv-smp.html">vexriscv-smp</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/zynq-ps7-counter.html">zynq-ps7-counter</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="chandalar-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> quicklogic </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/iir.html">iir</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/jpeg-qnr.html">jpeg-qnr</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/rsdecoder.html">rsdecoder</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="icebreaker-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-ice40 </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/up5k-nes.html">up5k-nes</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="lifcl-40-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-nexus </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="nexys-video-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-fpga-interchange </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> vivado </th>
+    
+      <th class="w3-center w3-border"> vpr </th>
+    
+      <th class="w3-center w3-border"> vpr-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado-uhdm </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/axi-lite-reg.html">axi-lite-reg</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex.html">baselitex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex-nexys-video.html">baselitex-nexys-video</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/blinky.html">blinky</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n1.html">bram-n1</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n2.html">bram-n2</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n3.html">bram-n3</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/daisho-usb3.html">daisho-usb3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/dram-test-64x1d.html">dram-test-64x1d</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-displayport.html">hamsternz-displayport</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-hdmi.html">hamsternz-hdmi</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/ibex.html">ibex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/murax.html">murax</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc.html">picosoc</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv.html">vexriscv</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv-smp.html">vexriscv-smp</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/zynq-ps7-counter.html">zynq-ps7-counter</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="quickfeather-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> quicklogic </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/iir.html">iir</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/jpeg-qnr.html">jpeg-qnr</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/rsdecoder.html">rsdecoder</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="tinyfpgab2-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-ice40 </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/up5k-nes.html">up5k-nes</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+          <div id="zybo-table" class="board-table w3-container w3-hide w3-padding-16">
+            <table class="w3-table-all w3-responsive ">
+  <tr class="w3-gray">
+    <th class="w3-center w3-border"> Toolchain  <br></br> Project</th>
+    
+      <th class="w3-center w3-border"> nextpnr-fpga-interchange </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx </th>
+    
+      <th class="w3-center w3-border"> nextpnr-xilinx-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> vivado </th>
+    
+      <th class="w3-center w3-border"> vpr </th>
+    
+      <th class="w3-center w3-border"> vpr-fasm2bels </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado </th>
+    
+      <th class="w3-center w3-border"> yosys-vivado-uhdm </th>
+    
+  </tr>
+  
+    <tr>
+      <th> <a href="graphs/axi-lite-reg.html">axi-lite-reg</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex.html">baselitex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/baselitex-nexys-video.html">baselitex-nexys-video</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/blinky.html">blinky</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n1.html">bram-n1</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n2.html">bram-n2</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/bram-n3.html">bram-n3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/daisho-usb3.html">daisho-usb3</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/dram-test-64x1d.html">dram-test-64x1d</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-displayport.html">hamsternz-displayport</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/hamsternz-hdmi.html">hamsternz-hdmi</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/ibex.html">ibex</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/murax.html">murax</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/oneblink.html">oneblink</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picorv32.html">picorv32</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc.html">picosoc</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-simpleuart.html">picosoc-simpleuart</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/picosoc-spimemio.html">picosoc-spimemio</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv.html">vexriscv</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/vexriscv-smp.html">vexriscv-smp</a></th>
+        
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: lightblue">
+              Skipped
+            </th>
+          
+      
+    </tr>
+  
+    <tr>
+      <th> <a href="graphs/zynq-ps7-counter.html">zynq-ps7-counter</a></th>
+        
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border failed" style="background-color: red">
+              Failed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+          
+            <th class="w3-center w3-border passed" style="background-color: lightgreen">
+              Passed
+            </th>
+          
+      
+    </tr>
+  
+</table>
+          </div>
+        
+      </div>
+    </div>
+  </body>
+
+<script charset="utf-8">
+
+// sets visibility of an element with the w3-hide class by appending/removing w3-show class
+function setVisibility(elem, on) {
+  if (on) {
+    if (elem.className.indexOf("w3-show") == -1) {
+      elem.className += " w3-show";
+    }
+  } else {
+    elem.className = elem.className.replace(" w3-show", "");
+  }
+}
+
+function toggleVisibility(id) {
+  var elem = document.getElementById(id);
+  setVisibility(elem, elem.className.indexOf("w3-show") == -1);
+}
+
+function selectTable(board_name) {
+  var table_id = board_name + "-table";
+  var button_id = board_name + "-button";
+
+  var tables = document.getElementsByClassName("board-table");
+  for (var i = tables.length - 1; i >= 0; i--) {
+    setVisibility(tables[i], tables[i].id == table_id);
+  }
+
+  var buttons = document.getElementsByClassName("board-button");
+  for (var i = buttons.length - 1; i >= 0; i--) {
+    if (buttons[i].id == button_id) {
+      buttons[i].className = buttons[i].className.replace(" w3-gray", "");
+      buttons[i].className = buttons[i].className.replace(" w3-light-gray", "");
+      buttons[i].className += " w3-gray";
+    } else {
+      buttons[i].className = buttons[i].className.replace(" w3-gray", "");
+      buttons[i].className = buttons[i].className.replace(" w3-light-gray", "");
+      buttons[i].className += " w3-light-gray";
+    }
+  }
+}
+
+// select first table on start
+selectTable("arty-a100t");
+
+</script>
+</html>
